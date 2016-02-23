@@ -1,0 +1,108 @@
+body {
+  background-color: white;
+}
+p {
+  margin: 5px;
+  padding: 3px;
+  border: 2px solid black;
+}
+
+.container {
+  width: 1085px;
+  margin: 10px auto;
+
+}
+%standard {
+  border: 3px solid black;
+  margin:  0 5px 8px 5px;
+}
+
+%captionBox{
+  position: absolute;
+  background-color: white;
+}
+
+.logo {
+  @extend %standard;
+  width: 240px;
+  height: 100px;
+  float: left;
+  background-color: rgb(122, 41, 94);
+  h1 {
+    color: white;
+    margin: -5px;
+  }
+}
+
+header {
+  background: rgb(54, 71, 98);
+  width: 800px;
+  float: left;
+  height: 100px;
+  @extend %standard;
+  padding: 0px
+}
+
+nav {
+  @extend %standard;
+  margin-top: 35px;
+  overflow: hidden;
+  width: 1055px;
+  clear: both;
+  height: 50px;
+  background: yellow;
+  p {
+    border: 0px;
+    margin-top: 5px;
+  }
+
+}
+
+img{
+  max-width:100%;
+  max-height:100%;
+}
+
+.photo-area {
+  @extend %standard;
+  position: relative;
+  float: left;
+  width: 400px;
+  height: 210px;
+  padding: 0;
+  p {
+    @extend %captionBox;
+    top: 155px
+  }
+}
+
+article {
+  @extend %standard;
+  position: relative;
+  float: left;
+  width: 640px;
+  height: 210px;
+  p {
+    @extend %captionBox;
+  }
+}
+
+.columns {
+  @extend %standard;
+  position: relative;
+  width: 341px;
+  height: 250px;
+  padding: 0;
+  float: left;
+  p {
+    @extend %captionBox;
+    &.bottom {
+      top: 200px;
+      left: 75px;
+    }
+  }
+}
+
+footer {
+  @extend nav;
+}
